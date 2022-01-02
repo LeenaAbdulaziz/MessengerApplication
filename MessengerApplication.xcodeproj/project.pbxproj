@@ -17,6 +17,12 @@
 		129124FC277DD054005408A2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 129124FB277DD054005408A2 /* FirebaseAuth */; };
 		129124FE277DD054005408A2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 129124FD277DD054005408A2 /* FirebaseDatabase */; };
 		12912500277DD054005408A2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 129124FF277DD054005408A2 /* FirebaseStorage */; };
+		12912505277DD259005408A2 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12912504277DD259005408A2 /* ConversationViewController.swift */; };
+		12912507277DD27F005408A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12912506277DD27F005408A2 /* LoginViewController.swift */; };
+		12912509277DD297005408A2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12912508277DD296005408A2 /* RegisterViewController.swift */; };
+		1291250B277DD2C0005408A2 /* NewConversationCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1291250A277DD2C0005408A2 /* NewConversationCollectionViewController.swift */; };
+		1291250D277DD2E0005408A2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1291250C277DD2E0005408A2 /* ProfileViewController.swift */; };
+		1291250F2780C47E005408A2 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1291250E2780C47E005408A2 /* GoogleService-Info-2.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		129124ED277DCEDD005408A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		129124F0277DCEDD005408A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		129124F2277DCEDD005408A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12912504277DD259005408A2 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		12912506277DD27F005408A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		12912508277DD296005408A2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1291250A277DD2C0005408A2 /* NewConversationCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationCollectionViewController.swift; sourceTree = "<group>"; };
+		1291250C277DD2E0005408A2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1291250E2780C47E005408A2 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,15 +76,45 @@
 		129124E3277DCEDA005408A2 /* MessengerApplication */ = {
 			isa = PBXGroup;
 			children = (
-				129124E4277DCEDA005408A2 /* AppDelegate.swift */,
-				129124E6277DCEDA005408A2 /* SceneDelegate.swift */,
-				129124E8277DCEDA005408A2 /* ViewController.swift */,
-				129124EA277DCEDA005408A2 /* Main.storyboard */,
+				12912501277DD1BA005408A2 /* Sources */,
+				12912502277DD1CB005408A2 /* Controllers */,
+				12912503277DD1FF005408A2 /* StoryBoards */,
 				129124ED277DCEDD005408A2 /* Assets.xcassets */,
-				129124EF277DCEDD005408A2 /* LaunchScreen.storyboard */,
 				129124F2277DCEDD005408A2 /* Info.plist */,
+				1291250E2780C47E005408A2 /* GoogleService-Info-2.plist */,
 			);
 			path = MessengerApplication;
+			sourceTree = "<group>";
+		};
+		12912501277DD1BA005408A2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				129124E4277DCEDA005408A2 /* AppDelegate.swift */,
+				129124E6277DCEDA005408A2 /* SceneDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		12912502277DD1CB005408A2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				129124E8277DCEDA005408A2 /* ViewController.swift */,
+				12912504277DD259005408A2 /* ConversationViewController.swift */,
+				12912506277DD27F005408A2 /* LoginViewController.swift */,
+				12912508277DD296005408A2 /* RegisterViewController.swift */,
+				1291250A277DD2C0005408A2 /* NewConversationCollectionViewController.swift */,
+				1291250C277DD2E0005408A2 /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		12912503277DD1FF005408A2 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				129124EA277DCEDA005408A2 /* Main.storyboard */,
+				129124EF277DCEDD005408A2 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +186,7 @@
 			files = (
 				129124F1277DCEDD005408A2 /* LaunchScreen.storyboard in Resources */,
 				129124EE277DCEDD005408A2 /* Assets.xcassets in Resources */,
+				1291250F2780C47E005408A2 /* GoogleService-Info-2.plist in Resources */,
 				129124EC277DCEDA005408A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +200,11 @@
 			files = (
 				129124E9277DCEDA005408A2 /* ViewController.swift in Sources */,
 				129124E5277DCEDA005408A2 /* AppDelegate.swift in Sources */,
+				12912505277DD259005408A2 /* ConversationViewController.swift in Sources */,
+				12912509277DD297005408A2 /* RegisterViewController.swift in Sources */,
+				12912507277DD27F005408A2 /* LoginViewController.swift in Sources */,
+				1291250B277DD2C0005408A2 /* NewConversationCollectionViewController.swift in Sources */,
+				1291250D277DD2E0005408A2 /* ProfileViewController.swift in Sources */,
 				129124E7277DCEDA005408A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +359,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -339,7 +387,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
