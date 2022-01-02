@@ -38,12 +38,18 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Log in">
                                             <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ddR-aF-KwT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Dd5-4k-hRS">
                                         <rect key="frame" x="0.0" y="180" width="300" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="facebook-logo" title="   Continue with Facebook" titleAlignment="leading"/>
+                                        <connections>
+                                            <action selector="facebooksigninPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pMQ-Lz-ifM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Zcv-JZ-eMj">
                                         <rect key="frame" x="0.0" y="240" width="300" height="40"/>
@@ -53,6 +59,9 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                             <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="GooglesigninPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Da-d3-0nA"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doesn't have account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4m-J8-7UE">
                                         <rect key="frame" x="0.0" y="300" width="300" height="40"/>
@@ -90,7 +99,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="PasswordField" destination="YRS-eW-F1V" id="yHo-zF-FNR"/>
                         <outlet property="SigninGoogleButton" destination="Zcv-JZ-eMj" id="oMm-Nf-CLQ"/>
+                        <outlet property="emailfieald" destination="WbH-LB-how" id="ekt-0y-gFi"/>
                         <outlet property="signupButton" destination="ehW-w2-aT7" id="EsC-FF-drY"/>
                     </connections>
                 </viewController>
@@ -119,31 +130,42 @@
                                 <rect key="frame" x="30" y="154" width="315" height="300"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VnU-FC-ZgJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="52"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="41.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iep-rD-PhU">
-                                        <rect key="frame" x="0.0" y="62" width="315" height="52"/>
+                                        <rect key="frame" x="0.0" y="51.5" width="315" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tLs-L8-Afd">
-                                        <rect key="frame" x="0.0" y="124" width="315" height="52"/>
+                                        <rect key="frame" x="0.0" y="103.5" width="315" height="41.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dZ7-c4-fvR">
-                                        <rect key="frame" x="0.0" y="186" width="315" height="52"/>
+                                        <rect key="frame" x="0.0" y="155" width="315" height="41.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gB5-x9-oek">
-                                        <rect key="frame" x="0.0" y="248" width="315" height="52"/>
+                                        <rect key="frame" x="0.0" y="206.5" width="315" height="42"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add photo profile">
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="SignuoPresed:" destination="tqi-1a-3HF" eventType="touchUpInside" id="xl5-cL-bWl"/>
+                                            <action selector="addPhotoPressed:" destination="tqi-1a-3HF" eventType="touchUpInside" id="IH7-J9-bae"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irt-nr-F0N">
+                                        <rect key="frame" x="0.0" y="258.5" width="315" height="41.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Sign up"/>
                                         <connections>
-                                            <action selector="SignuoPresed:" destination="tqi-1a-3HF" eventType="touchUpInside" id="xl5-cL-bWl"/>
+                                            <action selector="SignuoPresed:" destination="tqi-1a-3HF" eventType="touchUpInside" id="RHX-DF-MfH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -168,6 +190,7 @@
                         <outlet property="FirstNameField" destination="VnU-FC-ZgJ" id="0E9-Be-dnX"/>
                         <outlet property="LastNameField" destination="iep-rD-PhU" id="jLT-Ot-B0H"/>
                         <outlet property="PasswordField" destination="dZ7-c4-fvR" id="1uK-1E-ru0"/>
+                        <outlet property="imageview" destination="1OZ-wZ-esn" id="Ith-6y-32g"/>
                         <outlet property="mailField" destination="tLs-L8-Afd" id="U4Q-Nu-mig"/>
                     </connections>
                 </viewController>
@@ -186,6 +209,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

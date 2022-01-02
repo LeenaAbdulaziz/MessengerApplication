@@ -8,7 +8,11 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    @IBOutlet weak var PasswordField: UITextField!
+    
+    @IBOutlet weak var emailfieald: UITextField!
+    
     @IBOutlet weak var signupButton: UIButton!
     
     @IBOutlet weak var SigninGoogleButton: UIButton!
@@ -16,7 +20,7 @@ class LoginViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        PasswordField.isSecureTextEntry = true
         buttons = [ signupButton, SigninGoogleButton]
         createBoarders()
         // Do any additional setup after loading the view.
@@ -33,5 +37,17 @@ class LoginViewController: UIViewController {
         
         }
     }
+    
+    @IBAction func loginPressed(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func facebooksigninPressed(_ sender: UIButton) {
+    }
+    
 
+    
+    @IBAction func GooglesigninPressed(_ sender: UIButton) {
+    }
+    
 }
