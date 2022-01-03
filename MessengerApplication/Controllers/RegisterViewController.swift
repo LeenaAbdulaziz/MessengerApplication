@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
@@ -24,12 +25,34 @@ class RegisterViewController: UIViewController {
  
     
     @IBAction func SignuoPresed(_ sender: UIButton) {
+        createNewUser()
     }
     
     
     
     @IBAction func addPhotoPressed(_ sender: UIButton) {
         presentPhotoActionSheet()
+    }
+    
+    func createNewUser(){
+        // Firebase Login / check to see if email is taken
+        // try to create an account
+        FirebaseAuth.Auth.auth().createUser(withEmail: (mailField.text!), password: (PasswordField.text!), completion: { authResult , error  in
+            if let result = authResult  {
+             
+                
+                let user = result.user
+                print(" user register succefully: \(user)")
+                // if this succeeds, dismiss
+              
+                self.dismiss(animated: true, completion: nil)
+            }else if  let err = error{
+                print (err.localizedDescription)
+            }
+            
+        })
+
+
     }
     
 }

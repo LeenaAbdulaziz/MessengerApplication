@@ -22,7 +22,8 @@
 		12912509277DD297005408A2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12912508277DD296005408A2 /* RegisterViewController.swift */; };
 		1291250B277DD2C0005408A2 /* NewConversationCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1291250A277DD2C0005408A2 /* NewConversationCollectionViewController.swift */; };
 		1291250D277DD2E0005408A2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1291250C277DD2E0005408A2 /* ProfileViewController.swift */; };
-		1291250F2780C47E005408A2 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1291250E2780C47E005408A2 /* GoogleService-Info-2.plist */; };
+		129125112781E629005408A2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129125102781E629005408A2 /* DatabaseManager.swift */; };
+		129125142782E021005408A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 129125132782E021005408A2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +40,8 @@
 		12912508277DD296005408A2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1291250A277DD2C0005408A2 /* NewConversationCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationCollectionViewController.swift; sourceTree = "<group>"; };
 		1291250C277DD2E0005408A2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		1291250E2780C47E005408A2 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		129125102781E629005408A2 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		129125132782E021005408A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,7 @@
 				12912503277DD1FF005408A2 /* StoryBoards */,
 				129124ED277DCEDD005408A2 /* Assets.xcassets */,
 				129124F2277DCEDD005408A2 /* Info.plist */,
-				1291250E2780C47E005408A2 /* GoogleService-Info-2.plist */,
+				129125132782E021005408A2 /* GoogleService-Info.plist */,
 			);
 			path = MessengerApplication;
 			sourceTree = "<group>";
@@ -91,6 +93,7 @@
 			children = (
 				129124E4277DCEDA005408A2 /* AppDelegate.swift */,
 				129124E6277DCEDA005408A2 /* SceneDelegate.swift */,
+				129125122781E63C005408A2 /* Models */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -115,6 +118,14 @@
 				129124EF277DCEDD005408A2 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		129125122781E63C005408A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				129125102781E629005408A2 /* DatabaseManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,8 +196,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				129124F1277DCEDD005408A2 /* LaunchScreen.storyboard in Resources */,
+				129125142782E021005408A2 /* GoogleService-Info.plist in Resources */,
 				129124EE277DCEDD005408A2 /* Assets.xcassets in Resources */,
-				1291250F2780C47E005408A2 /* GoogleService-Info-2.plist in Resources */,
 				129124EC277DCEDA005408A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +217,7 @@
 				1291250B277DD2C0005408A2 /* NewConversationCollectionViewController.swift in Sources */,
 				1291250D277DD2E0005408A2 /* ProfileViewController.swift in Sources */,
 				129124E7277DCEDA005408A2 /* SceneDelegate.swift in Sources */,
+				129125112781E629005408A2 /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -39,6 +40,28 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {
+        
+        // Firebase Login
+        FirebaseAuth.Auth.auth().signIn(withEmail: (emailfieald.text!), password: (PasswordField.text!), completion: { [weak self] authResult, error in
+            guard let strongSelf = self else {
+                    return
+                }
+                if let result = authResult  {
+                    
+                    let user = result.user
+                    print("logged in user: \(user)")
+                    // if this succeeds, dismiss
+                    
+                    let vc = self?.storyboard?.instantiateViewController(withIdentifier: "ConversationViewController") as! ConversationViewController
+                    strongSelf.navigationController?.pushViewController(vc , animated: true)
+                    
+                }else if  let err = error{
+                    print (err.localizedDescription)
+                }
+                
+
+            
+        })
     }
     
     
@@ -48,6 +71,12 @@ class LoginViewController: UIViewController {
 
     
     @IBAction func GooglesigninPressed(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func signupPressed(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+        self.navigationController?.pushViewController(vc , animated: true)
     }
     
 }
